@@ -24,19 +24,20 @@ color: #e7c482;
 display: flex;
 align-items: center;
 padding: 0 1rem;
-font-size: 1rem;
+font-size: 1.5rem;
 font-family: inter, sans-serif;
 height: 100%
 cursor: pointer;
 text-decoration: none;
-:hover{
-    color: #fff;
-}
-  font-style: italic;
-  font-size: clamp(0.8rem, 8vw, 1.2rem);
-  img {
-    width: 50px;
+h1{
+  &:hover {
+    color: #cd853f;
+    transform: scale(1.05);
   }
+  font-size: clamp(1.8rem, 8vw, 1.2rem);
+  cursor: pointer;
+  }
+
 `;
 
 const MenuBar = styled(FaBars)`
@@ -122,6 +123,11 @@ const NavBtn = styled.div`
     color: #fff;
     font-family: Share Tech;
     font-size: 18px;
+    font-weight: 600;
+    &:hover {
+      background: #cd853f;
+      transform: scale(1.05);
+    }
   }
   div {
     margin-right: 30px;

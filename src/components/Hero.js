@@ -1,232 +1,170 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //import styled components
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { heroData } from "../data/HeroData";
 
-const Activitiesanimation = keyframes`
-to {left: 0px;}
-from {left: -400px;}
-`;
-const Activityanimation = keyframes`
-to {right: 0px;}
-from {right: -400px;}
-`;
-
-const HeroContainer = styled.section`
-  display: flex;
-  width: 100%;
+const HeroSection = styled.section`
+  margin: 0px 30px;
   height: 100vh;
-
-  @media Screen and (max-width: 1200px) {
-    display: grid;
-    height: auto;
-    justify-contents: center;
-  }
-  @media Screen and (max-width: 768px) {
-    display: grid;
-    justify-contents: center;
-  }
-  @media Screen and (max-width: 480px) {
-    display: grid;
-    justify-contents: center;
-  }
-`;
-const HeroContent = styled.div`
-  width: 50%;
-  margin-top: 60px;
+  max-height: 1100px;
   position: relative;
-  animation-name: ${Activitiesanimation};
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  @media Screen and (max-width: 1200px) {
-    width: 100%;
-    margin-top: 20px;
-  }
-  @media Screen and (max-width: 768px) {
-    width: 100%;
-    margin-top: 20px;
-  }
-  @media Screen and (max-width: 480px) {
-    width: 100%;
-    margin-top: 8px;
-  }
-  .btn {
-    display: flex;
-    @media Screen and (max-width: 1200px) {
-      display: flex;
-      justify-content: center;
-    }
-    @media Screen and (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-    }
-    @media Screen and (max-width: 480px) {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  .btn1 {
-    margin-left: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 40px;
-    background-color: #e7c482;
-    @media Screen and (max-width: 1200px) {
-      width: 150px;
-      height: 40px;
-      margin-left: 0rem;
-    }
-    @media Screen and (max-width: 768px) {
-      width: 150px;
-      height: 35px;
-      margin-left: 0rem;
-    }
-    @media Screen and (max-width: 480px) {
-      width: 150px;
-      height: 35px;
-      margin-left: 0rem;
-    }
-  }
-  .Donate {
-    font-family: Inter, sans-serif;
-    font-size: 1.2rem;
-    text-decoration: none;
-    @media Screen and (max-width: 768px) {
-      font-size: 1rem;
-    }
-    @media Screen and (max-width: 480px) {
-      font-size: 1rem;
-    }
-  }
-  button {
-    background-color: #143a5a;
-    border: none;
-    border-radius: 0px 10px 8px 10px;
-    height: 27px;
-    width: 100px;
-    color: #fff;
-  }
-  .img1 {
-    width: 30px;
-    height: 23px;
-    @media Screen and (max-width: 1200px) {
-      height: 30px;
-      width: 30px;
-    }
-    @media Screen and (max-width: 768px) {
-      height: 20px;
-      width: 30px;
-    }
-    @media Screen and (max-width: 480px) {
-      height: 20px;
-      width: 30px;
-    }
-  }
-`;
-const HeroContent1 = styled.div`
-  width: 50%;
-  margin-top: 60px;
-  position: relative;
-  animation-name: ${Activityanimation};
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  @media Screen and (max-width: 1200px) {
-    width: 100%;
-    padding: 6rem;
-    margin-top: 0px;
-  }
-  @media Screen and (max-width: 768px) {
-    width: 100%;
-    padding: 0rem;
-    margin-top: 0px;
-  }
-  @media Screen and (max-width: 480px) {
-    width: 100%;
-    padding: 0rem;
-    margin-top: 0px;
-  }
-`;
-const Heroh1 = styled.div`
-  margin: 12rem 0rem 0rem 10rem;
-  color: #fff;
-  font-family: Laila, sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  text-transform: titlecase;
-  line-height: 3.56rem;
-  .equal {
-    color: #e7c482;
-    font-family: Laila, sans-serif;
-  }
-  @media Screen and (max-width: 1200px) {
-    margin-left: 0rem;
-    text-align: center;
-  }
-  @media Screen and (max-width: 768px) {
-    margin-left: 0rem;
-    text-align: center;
-    font-size: 2rem;
-  }
-  @media Screen and (max-width: 480px) {
-    margin-left: 0rem;
-    text-align: center;
-  }
-`;
-const Herop = styled.div`
-  margin: 0rem 3.5rem 1rem 10rem;
-  color: #979797;
-  font-family: Inter, sans-serif;
-  font-size: clamp(0.7rem, 7vw, 1.2em);
-  font-weight: 500;
-  line-height: 1.7rem;
-  @media Screen and (max-width: 1200px) {
-    margin: 0rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  @media Screen and (max-width: 768px) {
-    margin-left: 0rem;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 0px 20px;
-  }
-  @media Screen and (max-width: 480px) {
-    margin-left: 0rem;
-    text-align: center;
-    margin-bottom: 20px;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    margin: 0px;
   }
 `;
 
-const NavMenuLink = styled.a`
-  text-decoration: none;
+const HeroWrapper = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-itmes: center:
+overflow: hidden;
+position: relative;
+`;
+
+const HeroSlide = styled.div`
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+`;
+
+const HeroSlider = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    bottom: 0vh;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.4;
+  }
+`;
+
+const HeroImage = styled.img`
+position: absolute;
+top: 0;
+left; 0;
+width: 100vw;
+height: 100vh;
+object-fit: cover;
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: grid;
+  max-width: 1600px;
+  width: calc(100% - 100px);
+  color: #fff;
+  h1 {
+    font-size: clamp(1rem, 8vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.8rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+    text-transform: titlecase;
+    font-size: clamp(0.8rem, 8vw, 1.7em);
+  }
+`;
+
+const Button = styled.div`
+  background-color: #e7c482;
+  border: none;
+  border-radius: 0px 10px 8px 10px;
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  font-family: Share Tech;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 0.5rem;
+  user-select: none;
+  transition: 0.3s;
+
+  &:hover {
+    background: #cd853f;
+    transform: scale(1.05);
+  }
 `;
 
 const Hero = () => {
+  const [current, setCurrent] = useState(0);
+  const length = heroData.length;
+  const timeout = useRef(null);
+
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
+    };
+    timeout.current = setTimeout(nextSlide, 10000);
+
+    return function () {
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
+    };
+  }, [current, length]);
+
   return (
-    <HeroContainer id="Home">
-      <HeroContent>
-        <Heroh1>
-          Dream big. <p className="equal">Achieve bigger.</p>
-        </Heroh1>
-        <Herop>
-          Trade with a global broker to achieve your investment goals.
-        </Herop>
-        <div className="btn">
-          <NavMenuLink href="/#Donate">
-            <button className="btn1">
-              <span className="Donate">Create An Account</span>
-            </button>
-          </NavMenuLink>
-        </div>
-      </HeroContent>
-      <HeroContent1></HeroContent1>
-    </HeroContainer>
+    <HeroSection>
+      <HeroWrapper>
+        {heroData.map((slide, index) => {
+          return (
+            <HeroSlide key={index}>
+              {index === current && (
+                <HeroSlider>
+                  <HeroImage src={slide.Image} alt="" />
+                  <HeroContent>
+                    <h1>{slide.title}</h1>
+                    <p>
+                      {slide.page}
+                      <br />
+                      {slide.page1}
+                    </p>
+                    <Button
+                      to={slide.path}
+                      primary="true"
+                      css={`
+                        max-width: 160px;
+                        border-radius: 20px;
+                      `}
+                    >
+                      {slide.label}
+                    </Button>
+                  </HeroContent>
+                </HeroSlider>
+              )}
+            </HeroSlide>
+          );
+        })}
+      </HeroWrapper>
+    </HeroSection>
   );
 };
 

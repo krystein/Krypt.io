@@ -110,6 +110,7 @@ const NavBtn = styled.div`
     color: #fff;
     font-family: Share Tech;
     font-size: 18px;
+    font-weight: 600;
   }
   div {
     margin-right: 30px;

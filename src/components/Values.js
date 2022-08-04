@@ -13,6 +13,9 @@ const ValueContainer = styled.section`
   @media Screen and (max-width: 1200px) {
     padding: 20px;
   }
+  @media screen and (max-width: 768px) {
+    margin: 0px;
+  }
   .Value {
     display: flex;
     justify-content: center;

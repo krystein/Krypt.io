@@ -67,11 +67,12 @@ const BtnWarp = styled.div`
   margin-top: 50px;
   justify-item: center;
   button {
-    background-color: #ff9f0d;
+    background-color: #e7c482;
     border: none;
     border-radius: 0px 10px 8px 10px;
     font-size: 1.2rem;
     font-family: inter, sans-serif;
+    font-weight: 600;
     height: 50px;
     width: 80%;
     color: #fff;
