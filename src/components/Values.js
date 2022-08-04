@@ -9,7 +9,7 @@ import Image3 from "../img/Be-leaders.svg";
 const ValueContainer = styled.section`
   padding: 10px 70px;
   margin: 0px 30px;
-  background-color: #fff;
+  background-color: #e7c482;
   @media Screen and (max-width: 1200px) {
     padding: 20px;
   }
