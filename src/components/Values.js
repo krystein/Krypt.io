@@ -78,12 +78,12 @@ const Valuepage = styled.div`
       justify-content: center;
     }
     border-radius: 0px 30px;
-    box-shadow: 0.25rem 0.25rem 3.38rem rgba(217, 217, 217, 0.5);
+    box-shadow: 0.25rem 0.25rem 3.38rem rgba(114, 104, 16, 0.5);
     transform: scale(1.05);
   }
   @media Screen and (max-width: 1200px) {
     border-radius: 0px 30px;
-    box-shadow: 0.25rem 0.25rem 3.38rem rgba(217, 217, 217, 0.5);
+    box-shadow: 0.25rem 0.25rem 3.38rem rgba(114, 104, 16, 0.5);
   }
 `;
 const ValueImg = styled.img`
