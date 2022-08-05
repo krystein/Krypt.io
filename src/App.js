@@ -1,17 +1,17 @@
 import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dropdown from "./components/Dropdown";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Values from "./components/Values";
 import GlobalStyle from "./globalstyles";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import Footer from "./components/Footer";
-import Section from "./components/Section";
 import styled from "styled-components";
 import img1 from "./img/img2.jpg";
-import Assignment from "./components/Assignment";
+import About from "./Pages/AboutUs";
+import Index from "./components";
+import AnaEdu from "./Pages/AnalysisEducation";
 
 const Container = styled.div`
+  padding-top: 60px;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5),
@@ -29,18 +29,19 @@ function App() {
     setIsOpen(!isOpen);
   };
   return (
-    <Container>
+    <BrowserRouter>
       <GlobalStyle />
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Hero />
-      <Values />
-      <Section />
-      <AnimationOnScroll animateIn="bounceIn">
-        <Assignment />
-      </AnimationOnScroll>
-      <Footer />
-    </Container>
+      <Container>
+        <Routes>
+          <Route exact path="/" element={<Index />}></Route>
+          <Route path="/About" element={<About />}></Route>
+          <Route path="/AnaEdu" element={<AnaEdu />}></Route>
+        </Routes>
+        <Footer />
+      </Container>
+    </BrowserRouter>
   );
 }
 

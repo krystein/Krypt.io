@@ -27,7 +27,7 @@ const ValueContainer = styled.section`
   }
   p {
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: clamp(0.8rem, 6vw, 1.3em);
     line-height: 175%;
     font-family: Inter, sans-serif;
     text-align: center;
@@ -94,7 +94,7 @@ const ValueImg = styled.img`
 `;
 const ValueH = styled.div`
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 8vw, 1rem);
   font-family: Inter, sans-serif;
   text-align: center;
   color: #143a5a;
@@ -103,7 +103,7 @@ const ValueH = styled.div`
 `;
 const Valueh2 = styled.div`
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: clamp(0.7rem, 8vw, 1em);
   line-height: 175%;
   font-family: Inter, sans-serif;
   text-align: center;

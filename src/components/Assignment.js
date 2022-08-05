@@ -34,67 +34,15 @@ const Assignmentpage = styled.div`
   .ProjectGoal {
     color: #979797;
     font-family: Inter, sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 6vw, 1.3em);
     font-weight: 500;
     line-height: 2rem;
     text-align: center;
-  }
-  .Locations {
-    color: #979797;
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 2rem;
-    text-align: center;
-  }
-  .FundingGoal {
-    color: #979797;
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 2rem;
-    text-align: center;
-  }
-  .TotalFunded {
-    color: #979797;
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 2rem;
-    text-align: center;
-    text-transform: titlecase;
   }
   .Amt1 {
     color: #fff;
     font-family: Laila, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: titlecase;
-    line-height: 2.93rem;
-    text-align: center;
-  }
-  .USA {
-    color: #fff;
-    font-family: Laila, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: titlecase;
-    line-height: 2.93rem;
-    text-align: center;
-  }
-  .Amt2 {
-    color: #fff;
-    font-family: Laila, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: titlecase;
-    line-height: 2.93rem;
-    text-align: center;
-  }
-  .Amt3 {
-    color: #fff;
-    font-family: Laila, sans-serif;
-    font-size: 2rem;
+    font-size: clamp(1rem, 8vw, 3rem);
     font-weight: 700;
     text-transform: titlecase;
     line-height: 2.93rem;
@@ -110,18 +58,18 @@ const Assignment = () => {
         <h1 className="ProjectGoal">Quaterly Volume Traded</h1>
       </div>
       <div>
-        <h1 className="USA">100+</h1>
-        <h1 className="Locations">Countries Supported</h1>
+        <h1 className="Amt1">100+</h1>
+        <h1 className="ProjectGoal">Countries Supported</h1>
       </div>
 
       <div>
-        <h1 className="Amt2">$1,5000</h1>
-        <h1 className="FundingGoal">Funding Goal</h1>
+        <h1 className="Amt1">$1,500</h1>
+        <h1 className="ProjectGoal">Funding Goal</h1>
       </div>
 
       <div>
-        <h1 className="Amt3">5M+</h1>
-        <h1 className="TotalFunded">Verified Users</h1>
+        <h1 className="Amt1">5M+</h1>
+        <h1 className="ProjectGoal">Verified Users</h1>
       </div>
     </Assignmentpage>
   );

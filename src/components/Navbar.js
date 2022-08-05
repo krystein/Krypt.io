@@ -19,7 +19,7 @@ const Nav = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
 color: #e7c482;
 display: flex;
 align-items: center;
@@ -52,31 +52,7 @@ const MenuBar = styled(FaBars)`
     top: 0;
     right: 0;
     transform: translate(-50%, 25%);
-    color: #143a5a;
-  }
-  @media Screen and (max-width: 768px) {
-    display: block;
-    background-size: contain;
-    height: 35px;
-    width: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-50%, 25%);
-    color: #143a5a;
-  }
-  @media Screen and (max-width: 480px) {
-    display: block;
-    background-size: contain;
-    height: 35px;
-    width: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-50%, 25%);
-    color: #143a5a;
+    color: #e7c482;
   }
 `;
 const NavMenu = styled.div`
@@ -149,7 +125,7 @@ const NavBtn = styled.div`
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
-      <Logo to="/">
+      <Logo href="/">
         <h1>Krypt.io</h1>
       </Logo>
       <MenuBar onClick={toggle} />

@@ -67,23 +67,17 @@ const SectionContent1 = styled.div`
   .sectionp {
     color: #979797;
     font-family: Inter, sans-serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 6vw, 1.1em);
     font-weight: 500;
     line-height: 2rem;
-    @media Screen and (max-width: 1200px) {
-      font-size: 0.75rem;
-    }
   }
   .sectionh1 {
     color: #143a5a;
     font-family: Laila, sans-serif;
-    font-size: 2.81rem;
+    font-size: clamp(1rem, 8vw, 3rem);
     font-weight: 700;
     text-transform: titlecase;
-    line-height: 3.13rem;
-    @media Screen and (max-width: 1200px) {
-      font-size: 2rem;
-    }
+    line-height: 2rem;
   }
   .sectiondiv {
     display: flex;
