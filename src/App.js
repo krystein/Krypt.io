@@ -38,6 +38,7 @@ function App() {
           <Route exact path="/" element={<Index />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/AnaEdu" element={<AnaEdu />}></Route>
+          <Route path="/AnaEdu" element={<AnaEdu />}></Route>
         </Routes>
         <Footer />
       </Container>
