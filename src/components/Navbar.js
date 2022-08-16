@@ -90,6 +90,9 @@ const NavBtn = styled.div`
   align-items: center;
   margin-right: 24px;
   gap: 20px;
+  a {
+    text-decoration: none;
+  }
   button {
     background-color: #e7c482;
     border: none;
@@ -100,9 +103,16 @@ const NavBtn = styled.div`
     font-family: Share Tech;
     font-size: 18px;
     font-weight: 600;
+    user-select: none;
+    -webkit-transition: color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     &:hover {
       background: #cd853f;
       transform: scale(1.05);
+      border-color: #cd853f;
     }
   }
   div {
@@ -139,8 +149,12 @@ const Navbar = ({ toggle }) => {
         })}
       </NavMenu>
       <NavBtn>
-        <button>Open Account</button>
-        <button>Log in</button>
+        <a href="/Openaccount">
+          <button>Open Account</button>
+        </a>
+        <a href="/Login">
+          <button>Log in</button>
+        </a>
       </NavBtn>
     </Nav>
   );

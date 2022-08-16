@@ -101,10 +101,14 @@ const Dropdown = ({ isOpen, toggle }) => {
         </DropdownMenu>
         <BtnWarp>
           <div className="btn">
-            <button>Open Trading Account</button>
+            <a href="/Openaccount">
+              <button>Open Account</button>
+            </a>
           </div>
           <div className="btn">
-            <button>Log in</button>
+            <a href="/Login">
+              <button>Log in</button>
+            </a>
           </div>
         </BtnWarp>
       </DropdownWrapper>

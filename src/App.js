@@ -8,7 +8,8 @@ import styled from "styled-components";
 import img1 from "./img/img2.jpg";
 import About from "./Pages/AboutUs";
 import Index from "./components";
-import AnaEdu from "./Pages/AnalysisEducation";
+import Openaccount from "./Pages/Openaccount";
+import Login from "./Pages/Login";
 
 const Container = styled.div`
   padding-top: 60px;
@@ -37,7 +38,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Index />}></Route>
           <Route path="/About" element={<About />}></Route>
-          <Route path="/AnaEdu" element={<AnaEdu />}></Route>
+          <Route path="/Openaccount" element={<Openaccount />}></Route>
+          <Route path="/Login" element={<Login />}></Route>
         </Routes>
         <Footer />
       </Container>

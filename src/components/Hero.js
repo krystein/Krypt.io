@@ -87,6 +87,7 @@ const HeroContent = styled.div`
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     font-weight: 400;
     text-transform: titlecase;
+    color: #fff;
     font-size: clamp(0.8rem, 8vw, 1.7em);
   }
 `;
