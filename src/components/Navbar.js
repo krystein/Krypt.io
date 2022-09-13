@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { menuData } from "../data/MenuData";
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Nav = styled.div`
   height: 60px;
@@ -69,7 +70,7 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
-const NavMenuLink = styled.a`
+const NavMenuLink = styled.div`
   cursor: pointer;
   color: #fff;
 display: flex;
@@ -142,19 +143,19 @@ const Navbar = ({ toggle }) => {
       <NavMenu>
         {menuData.map((item, index) => {
           return (
-            <NavMenuLink href={item.link} key={index}>
-              {item.title}
+            <NavMenuLink key={index}>
+              <Link to={item.link}>{item.title}</Link>
             </NavMenuLink>
           );
         })}
       </NavMenu>
       <NavBtn>
-        <a href="../Pages/Openaccount">
+        <Link to="/OpenAccount">
           <button>Open Account</button>
-        </a>
-        <a href="../Pages/Login">
+        </Link>
+        <Link to="/Login">
           <button>Log in</button>
-        </a>
+        </Link>
       </NavBtn>
     </Nav>
   );
