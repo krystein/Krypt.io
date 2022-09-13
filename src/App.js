@@ -6,7 +6,7 @@ import GlobalStyle from "./globalstyles";
 import Footer from "./components/Footer";
 import styled from "styled-components";
 import img1 from "./img/img2.jpg";
-import About from "./Pages/AboutUs";
+import About from "./Pages/About";
 import Index from "./components";
 import Openaccount from "./Pages/Openaccount";
 import Login from "./Pages/Login";
@@ -37,7 +37,7 @@ function App() {
       <Container>
         <Routes>
           <Route exact path="/" element={<Index />}></Route>
-          <Route path="./Pages/AboutUs" element={<About />}></Route>
+          <Route path="./Pages/About" element={<About />}></Route>
           <Route path="./Pages/Openaccount" element={<Openaccount />}></Route>
           <Route path="./Pages/Login" element={<Login />}></Route>
         </Routes>

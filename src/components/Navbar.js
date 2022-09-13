@@ -150,10 +150,10 @@ const Navbar = ({ toggle }) => {
         })}
       </NavMenu>
       <NavBtn>
-        <Link to="/OpenAccount">
+        <Link to="../Pages/OpenAccount">
           <button>Open Account</button>
         </Link>
-        <Link to="/Login">
+        <Link to="../Pages/Login">
           <button>Log in</button>
         </Link>
       </NavBtn>
