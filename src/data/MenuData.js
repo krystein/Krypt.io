@@ -1,7 +1,7 @@
 export const menuData = [
-  { title: "About Us", link: "../pages/About" },
-  { title: "Investment", link: "../pages/Investment" },
-  { title: "Trading Platforms", link: "../pages/Trading platform" },
-  { title: "Accounts", link: "../pages/Account" },
-  { title: "Analysis/Education", link: "../pages/AnalysisEducation" },
+  { title: "About Us", link: "../Pages/About" },
+  { title: "Investment", link: "../Pages/Investment" },
+  { title: "Trading Platforms", link: "../Pages/Trading platform" },
+  { title: "Accounts", link: "../Pages/Account" },
+  { title: "Analysis/Education", link: "../Pages/AnalysisEducation" },
 ];
