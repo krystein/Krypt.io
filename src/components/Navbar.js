@@ -71,8 +71,8 @@ const NavMenu = styled.div`
   }
 `;
 const NavMenuLink = styled.div`
-  cursor: pointer;
-  color: #fff;
+cursor: pointer;
+color: #fff;
 display: flex;
 align-items: center;
 padding: 0 1rem;
@@ -144,7 +144,9 @@ const Navbar = ({ toggle }) => {
         {menuData.map((item, index) => {
           return (
             <NavMenuLink key={index}>
-              <Link to={item.link}>{item.title}</Link>
+              <Link to={item.link} style={{ color: "#fff" }}>
+                {item.title}
+              </Link>
             </NavMenuLink>
           );
         })}
