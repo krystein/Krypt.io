@@ -3,7 +3,7 @@ import "./index.css";
 //import components
 import FormLogin from "./Login";
 
-const Login = () => {
+const Index = () => {
   return (
     <div>
       <FormLogin />
@@ -11,4 +11,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Index;

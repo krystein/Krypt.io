@@ -3,7 +3,7 @@ import "./index.css";
 //import components
 import Form from "./Form";
 
-const Openaccount = () => {
+const Index = () => {
   return (
     <div>
       <Form />
@@ -11,4 +11,4 @@ const Openaccount = () => {
   );
 };
 
-export default Openaccount;
+export default Index;

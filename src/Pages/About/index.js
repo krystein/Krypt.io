@@ -9,7 +9,7 @@ const Content = styled.div`
   margin-bottom: 20px;
 `;
 
-const About = () => {
+const Index = () => {
   return (
     <>
       <Content>
@@ -25,4 +25,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Index;
