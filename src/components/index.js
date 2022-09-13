@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from "./Hero";
 import Values from "./Values";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import Section from "./Section";
 import styled from "styled-components";
 import Img1 from "../img/img2.jpg";
@@ -23,9 +22,7 @@ const Index = () => {
     <Container>
       <Hero />
       <Values />
-      <AnimationOnScroll animateIn="bounceIn">
-        <Section />
-      </AnimationOnScroll>
+      <Section />
       <Assignment />
     </Container>
   );

@@ -37,9 +37,9 @@ function App() {
       <Container>
         <Routes>
           <Route exact path="/" element={<Index />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="/Openaccount" element={<Openaccount />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
+          <Route path="./Pages/AboutUs" element={<About />}></Route>
+          <Route path="./Pages/Openaccount" element={<Openaccount />}></Route>
+          <Route path="./Pages/Login" element={<Login />}></Route>
         </Routes>
         <Footer />
       </Container>

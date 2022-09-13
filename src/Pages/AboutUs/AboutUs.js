@@ -85,10 +85,7 @@ const AboutUs = () => {
         <AboutImg src={Image} alt="" />
       </AboutContent>
       <AboutContent1>
-        <h1 className="Abouth1">
-          About
-          <br /> Krypt.io
-        </h1>
+        <h1 className="Abouth1">Krypt.io</h1>
         <p className="Aboutp">
           We are building the cryptoeconomy – a more fair, accessible,
           efficient, and transparent financial system enabled by crypto.

@@ -63,13 +63,13 @@ const Footerpage = styled.div`
   }
 `;
 const Footerpage1 = styled.div`
-  line-height: 40px;
   @media Screen and (max-width: 768px) {
     line-height: 30px;
     margin-bottom: 10px;
   }
   h2,
   h3 {
+    line-height: 30px;
     font-family: Inter, sans-serif;
     font-size: 12px;
     font-weight: 500;
@@ -102,11 +102,11 @@ const Footerpage2 = styled.div`
 `;
 const Footerpage3 = styled.div`
   .btn {
-    background-color: #ff9f0d;
+    background-color: #e7c482;
     border: none;
     border-radius: 0px 10px 8px 10px;
     height: 40px;
-    width: 100px;
+    width: 150px;
     color: #fff;
     font-weight: 500;
     letter-spacing: 0em;
@@ -173,7 +173,7 @@ const Footer = () => {
           </div>
           <div className="mail">
             <img src={Image2} alt="" className="img" />
-            help@rescueforchrist.org
+            help@kryptio.org
           </div>
           <div>
             <img src={Image3} alt="" className="img" />
@@ -182,24 +182,23 @@ const Footer = () => {
         </Footerpage>
         <Footerpage1>
           <h2>General</h2>
-          <h3>Home</h3>
           <h3>About Us</h3>
-          <h3>Contact</h3>
-          <h3>Donate</h3>
-          <h3>Blog</h3>
+          <h3>Investment</h3>
+          <h3>Trading Platform</h3>
+          <h3>Account</h3>
+          <h3>Analysis</h3>
         </Footerpage1>
         <Footerpage2>
           <h2>Information</h2>
           <h3>Activities</h3>
-          <h3>Values</h3>
+          <h3>BlockChain</h3>
           <h3>Mission</h3>
-          <h3>Vision</h3>
           <h3>Strategic Objectives</h3>
+          <h3>Blog</h3>
         </Footerpage2>
         <Footerpage3>
-          <h2>Get Letter</h2>
           <p>
-            Subscribe to our new Letter to get
+            Subscribe to our news Letter to get
             <br /> latest updates
           </p>
           <button className="btn">Request Advice</button>
@@ -221,8 +220,8 @@ const Footer = () => {
       </Footercontent>
       <Footercontent1>
         <h4>
-          Copyright © 2021 Rescue for christ. All rights reserved "created by
-          Blue Kanel HQ”.
+          Copyright © 2020 krypt.io. All rights reserved "created by krystein
+          HQ”.
         </h4>
       </Footercontent1>
     </FooterContainer>

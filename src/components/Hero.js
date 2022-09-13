@@ -107,7 +107,6 @@ const Button = styled.div`
   margin-right: 0.5rem;
   user-select: none;
   transition: 0.3s;
-
   &:hover {
     background: #cd853f;
     transform: scale(1.05);

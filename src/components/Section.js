@@ -77,7 +77,7 @@ const SectionContent1 = styled.div`
     font-size: clamp(1rem, 8vw, 3rem);
     font-weight: 700;
     text-transform: titlecase;
-    line-height: 2rem;
+    line-height: 2.5rem;
   }
   .sectiondiv {
     display: flex;

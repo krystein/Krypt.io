@@ -10,7 +10,6 @@ const AboutContainer = styled.section`
   }
   @media screen and (max-width: 768px) {
     margin: 0px;
-    display: flex;
   }
 `;
 const Aboutsection = styled.div`
@@ -19,7 +18,7 @@ const Aboutsection = styled.div`
   grid-gap: 10px;
   padding: 20px;
   @media screen and (max-width: 768px) {
-    display: flex;
+    grid-template-columns: 1fr;
   }
 `;
 const AboutH = styled.div`
@@ -28,7 +27,7 @@ const AboutH = styled.div`
   font-size: clamp(0.8rem, 8vw, 1.5rem);
   font-weight: 700;
   text-transform: titlecase;
-  line-height: 3.13rem;
+  line-height: 2.5rem;
   padding-top: 20px;
 `;
 const AboutP = styled.div`

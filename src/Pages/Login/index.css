@@ -5525,10 +5525,10 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
-.Openaccount {
+/* .Openaccount {
   display: flex;
   justify-content: center;
-}
+} */
 
 .card {
   position: relative;
