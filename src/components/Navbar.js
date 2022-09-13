@@ -143,11 +143,9 @@ const Navbar = ({ toggle }) => {
       <NavMenu>
         {menuData.map((item, index) => {
           return (
-            <NavMenuLink key={index}>
-              <Link to={item.link} style={{ color: "#fff" }}>
-                {item.title}
-              </Link>
-            </NavMenuLink>
+            <Link to={item.link}>
+              <NavMenuLink key={index}>{item.title}</NavMenuLink>
+            </Link>
           );
         })}
       </NavMenu>
